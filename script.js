@@ -25,3 +25,13 @@ document.addEventListener('keydown', function(event) {
         popcatgopop();
     }
 });
+
+document.onclick= function(event){
+    popcatgopop();
+}
+
+window.onload = function() {
+    document.body.onselectstart = function() {
+        return false;
+    }
+}

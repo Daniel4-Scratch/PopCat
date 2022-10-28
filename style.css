@@ -7,6 +7,17 @@ body{
     width: 100%;
     background: lightblue url("src/tile2.png");
     background-size: 60px 60px;
+
+    -moz-user-select: -moz-none;
+   -khtml-user-select: none;
+   -webkit-user-select: none;
+
+   /*
+     Introduced in IE 10.
+     See http://ie.microsoft.com/testdrive/HTML5/msUserSelect/
+   */
+   -ms-user-select: none;
+   user-select: none;
 }
 
 h1{
@@ -38,3 +49,7 @@ bottom: 0;
     width:300px
 }
 
+#popcat{-moz-user-select: none;
+    -webkit-user-select: none;
+    user-select: none;
+    pointer-events: none;}
