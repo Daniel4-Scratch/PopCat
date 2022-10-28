@@ -1,0 +1,40 @@
+@import url('https://fonts.googleapis.com/css2?family=Varela+Round&display=swap');
+
+
+body{
+    font-family: 'Varela Round', sans-serif;
+    overflow: hidden;
+    width: 100%;
+    background: lightblue url("src/tile2.png");
+    background-size: 60px 60px;
+}
+
+h1{
+    color: white;
+	font-size: 80px;
+    font-weight: 700;
+	-webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: black;
+}
+
+#popcat{
+    width: 400px;
+    height: 450px;
+    display: block;
+  margin-left: auto;
+  margin-right: auto;
+
+}
+div.popcat{
+    position: absolute; 
+bottom: 0;
+    margin: 0;
+   width:100%;
+   align-self: center;
+    z-index: 1;
+}
+
+#title{
+    width:300px
+}
+
