@@ -23,11 +23,12 @@ function popcatgopop() {
 document.addEventListener('keydown', function(event) {
     if(event.keyCode == 32) {
         popcatgopop();
-    }
+    } 
 });
 
 document.onclick= function(event){
     popcatgopop();
+
 }
 
 window.onload = function() {
