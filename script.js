@@ -29,14 +29,7 @@ function eraseCookie(name) {
     document.cookie = name +'=; Path=/; Expires=Thu, 01 Jan 1970 00:00:01 GMT;';
 }
 
-if (getCookie("pops") == null) {
-    setCookie("pops", 0, 365);
-    pops = 0;
-}
-else {
-    pops = getCookie("pops");
-    document.getElementById("count").innerHTML = pops;
-}
+var pops = 0
 
 function playPop() {//plays pop sound
     setTimeout(() => { popcat.src = popcatClose; }, 100);
@@ -46,7 +39,7 @@ function playPop() {//plays pop sound
 
 function popcatgopop() {//pops the cat
     pops += 1;
-    setCookie("pops", pops, 365);
+    
     document.getElementById("count").innerHTML = pops;
     var popcat = document.getElementById("popcat");
     popcat.src = popcatOpen;
