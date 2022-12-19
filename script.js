@@ -1,6 +1,9 @@
 var popcatOpen = "src/open.png"
 var popcatClose = "src/close.png"
 
+console.log("Popcat Clicker v0.1.0")
+console.log("Made by: github@Daniel4-Scratch")
+console.log("Functions: popcatgopop(), resetPops(), setPops(input)")
 
 let pops = 0;
 if (localStorage.getItem("clicks") === null | localStorage.getItem("clicks") === NaN | localStorage.getItem("clicks") === undefined | localStorage.getItem("clicks") === "NaN") {
