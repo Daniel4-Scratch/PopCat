@@ -5,10 +5,11 @@ var popcatClose = "src/close.png"
 let pops = 0;
 if (localStorage.getItem("clicks") === null | localStorage.getItem("clicks") === NaN | localStorage.getItem("clicks") === undefined | localStorage.getItem("clicks") === "NaN") {
     localStorage.setItem('clicks', pops);
-  } else {
+} else {
     const storedClicks = localStorage.getItem('clicks');
-   pops = storedClicks;
-  }
+    pops = storedClicks;
+    document.getElementById("count").innerText = pops;
+}
 
 
 //play sound
@@ -28,8 +29,6 @@ function popcatgopop() {
     playPop(); 
 
 }
-
-
 
 function resetPops() {
     localStorage.setItem('clicks', 0);
