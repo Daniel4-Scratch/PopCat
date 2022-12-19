@@ -12,6 +12,7 @@ function playPop() {//plays pop sound
 }
 
 function popcatgopop() {//pops the cat
+    pops = parseInt(pops);
     pops += 1;
     localStorage.setItem('clicks', pops);
     document.getElementById("count").innerHTML = pops;
