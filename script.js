@@ -49,9 +49,13 @@ function setPops(input) {
 //listens for space presses and clicks
 
 document.addEventListener('keydown', function (event) {//listens for space presses
+    
     if (event.keyCode == 32) {//space key
         popcatgopop();
-    }
+        
+}
+
+
 });
 
 document.onclick = function (event) {
