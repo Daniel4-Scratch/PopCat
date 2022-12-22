@@ -21,6 +21,7 @@ if (localStorage.getItem("background") === null | localStorage.getItem("backgrou
     localStorage.setItem('background', 'moving');
     document.getElementById("body").style.background = "url('src/GIF.gif')";
         document.getElementById("background").checked = true;
+        document.getElementById("body").style.backgroundSize = "60px 60px";
 } else {
     const background = localStorage.getItem('background');
     if (background == "moving") {
