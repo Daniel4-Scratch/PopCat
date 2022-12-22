@@ -14,7 +14,18 @@
         <link rel="stylesheet" href="style.css">
         <script src="script.js" defer></script>
     </head>
-    <body>
+    <body id="body">
+        <div id="options" class="options">
+            <span class="title" style="margin-top:5px">Options</span> <span id="close" onclick="getElementById('options').remove(); setTimeout(function(){isMouseHover = false},100);">X</span>
+            <div class="option">
+                <span class="option-title">Moving Background</span>
+                <input type="checkbox" id="background" onclick="toggleBackground()">
+            </div>
+            <div class="option">
+                <button id="reset" onclick="if(confirm('Are you sure you want to reset?')){resetPops()}">Reset Pops</button>
+            </div>
+            <span style="margin-bottom: 5px; font-size: x-small;">To reopen options just refresh the page</span>
+        </div>
         <center><h1 id="count">0</h1></center>
         <div class="popcat" >
             <img src="src/close.png" alt="PopCat" id="popcat">

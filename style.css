@@ -5,7 +5,7 @@ body{
     font-family: 'Varela Round', sans-serif;
     overflow: hidden;
     width: 100%;
-    background: lightblue url("src/GIF.gif");
+    background-color: #4F8BFF;
     background-size: 60px 60px;
 
     -moz-user-select: -moz-none;
@@ -21,7 +21,7 @@ h1{
     font-weight: 700;
 	-webkit-text-stroke-width: 1px;
     -webkit-text-stroke-color: black;
-    z-index: 10;
+    z-index: 3;
     position: relative;
 }
 
@@ -50,3 +50,69 @@ bottom: 0;
     -webkit-user-select: none;
     user-select: none;
     pointer-events: none;}
+
+
+.options{
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 5;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: white;
+    width:230px;
+    border-radius: 0px 0px 5px 0px;
+}
+
+.options .title{
+    font-size: 20px;
+    font-weight: 700;
+    margin: 0;
+    padding: 0;
+    margin-bottom: 10px;
+}
+
+.options #close{
+    position: absolute;
+    top: 0;
+    right: 0;
+    font-size: 20px;
+    font-weight: 700;
+    margin: 0;
+    padding: 0;
+    margin-bottom: 10px;
+    margin-right:10px;
+    cursor: pointer;
+}
+
+.options .option{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+    margin-bottom: 10px;
+}
+
+button{
+    cursor: pointer;
+    z-index: 10;
+}
+input{
+    cursor: pointer;
+    z-index: 10;
+}
+
+@media (max-width:550px) { 
+    .options{
+        width:100%;
+        border-radius: 0;
+    }
+    #popcat{
+        width: 50%;
+        height: 50%;
+    }
+}

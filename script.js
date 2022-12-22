@@ -5,6 +5,9 @@ console.log("Popcat Clicker v0.1.0")
 console.log("Made by: github@Daniel4-Scratch")
 console.log("Functions: popcatgopop(), resetPops(), setPops(input)")
 
+
+/* Set Local Vars */
+
 let pops = 0;
 if (localStorage.getItem("clicks") === null | localStorage.getItem("clicks") === NaN | localStorage.getItem("clicks") === undefined | localStorage.getItem("clicks") === "NaN") {
     localStorage.setItem('clicks', pops);
@@ -14,6 +17,49 @@ if (localStorage.getItem("clicks") === null | localStorage.getItem("clicks") ===
     document.getElementById("count").innerText = pops;
 }
 
+if (localStorage.getItem("background") === null | localStorage.getItem("background") === NaN | localStorage.getItem("background") === undefined | localStorage.getItem("background") === "NaN") {
+    localStorage.setItem('background', 'moving');
+} else {
+    const background = localStorage.getItem('background');
+    if (background == "moving") {
+        document.getElementById("body").style.background = "url('src/GIF.gif')";
+        document.getElementById("background").checked = true;
+    } else if (background == "static") {
+        document.getElementById("body").style.background = "url('src/tile.png')";
+        document.getElementById("background").checked = false;
+    }
+    document.getElementById("body").style.backgroundSize = "60px 60px";
+
+}
+
+
+/* Options box */
+
+
+let isMouseHover = false
+let test = document.getElementById("options");
+test.addEventListener("mouseleave", function (event) {
+  isMouseHover = false
+}, false);
+test.addEventListener("mouseover", function (event) {
+  isMouseHover = true
+}, false);
+
+function toggleBackground() {
+    if (document.getElementById("background").checked == true) {
+        document.getElementById("body").style.background = "url('src/GIF.gif')";
+        localStorage.setItem('background', 'moving');
+    } else {
+        document.getElementById("body").style.background = "url('src/tile.png')";
+        localStorage.setItem('background', 'static');
+    }
+    document.getElementById("body").style.backgroundSize = "60px 60px";
+}
+
+
+
+
+/* The Actual Popcat Functions */
 
 //play sound
 function playPop() {
@@ -23,6 +69,7 @@ function playPop() {
 }
 //popcatgopop function
 function popcatgopop() {
+    if (isMouseHover == false) {
     pops = parseInt(pops);
     pops += 1;
     localStorage.setItem('clicks', pops);
@@ -30,7 +77,7 @@ function popcatgopop() {
     const popcat = document.getElementById("popcat");
     popcat.src = popcatOpen;
     playPop(); 
-
+    }
 }
 
 function resetPops() {
