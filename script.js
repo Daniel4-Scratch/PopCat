@@ -19,6 +19,8 @@ if (localStorage.getItem("clicks") === null | localStorage.getItem("clicks") ===
 
 if (localStorage.getItem("background") === null | localStorage.getItem("background") === NaN | localStorage.getItem("background") === undefined | localStorage.getItem("background") === "NaN") {
     localStorage.setItem('background', 'moving');
+    document.getElementById("body").style.background = "url('src/GIF.gif')";
+        document.getElementById("background").checked = true;
 } else {
     const background = localStorage.getItem('background');
     if (background == "moving") {
